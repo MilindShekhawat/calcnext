@@ -19,7 +19,7 @@ export default function Home() {
     switch(buttonPressed) {
       case "=":
         try {
-          const result = eval(expression).toString();   
+          const result = (Math.round((eval(expression) * 10000000000))/10000000000).toString();   
           setExpression(result);
         } catch (error) {
           setExpression("Invalid Input");
